@@ -1,0 +1,12 @@
+﻿body {
+    .background-image
+
+{
+    background-image: url('/path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Certifique-se de que este valor corresponde ao valor em seu componente */
+    width: 100%; /* Certifique-se de que este valor corresponde ao valor em seu componente */
+}
+
+}

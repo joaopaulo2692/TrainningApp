@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject NavigationManager Navigation
 
 <PageTitle>Home</PageTitle>
 
@@ -30,15 +31,15 @@
 
 <MudPaper Height="400px" Width="100%">
     <MudText Typo="Typo.h2" Align="Align.Center">Seu novo App de Treinamentos!</MudText>
-    <MudText Typo="Typo.h4" Align="Align.Center">Escolha o seu perfil</MudText>
+    <MudText Typo="Typo.h4" Align="Align.Center">Escolha o seu perfil:</MudText>
     <MudContainer MaxWidth="MaxWidth.Small" Style="margin-top: 40px;">
         
         <MudGrid Justify="Justify.Center">
             <MudItem>
-                <MudButton Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Aluno</MudButton>
+                <MudButton @onclick="@NavigateToStudent" Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Aluno</MudButton>
             </MudItem>
             <MudItem>
-                <MudButton Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Personal</MudButton>
+                <MudButton @onclick="@NavigateToPersonal" Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Personal</MudButton>
             </MudItem>
         </MudGrid>
     </MudContainer>
@@ -53,4 +54,13 @@
     private bool enableSwipeGesture = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
+
+    private void NavigateToStudent()
+    {
+        Navigation.NavigateTo("/aluno");
+    }
+    private void NavigateToPersonal()
+    {
+        Navigation.NavigateTo("/personal");
+    }
 }
