@@ -1,0 +1,56 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<MudCarousel Class="mud-width-full" Style="height:300px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+    <MudCarouselItem Transition="transition" Color="@Color.Primary">
+        <MudImage Src="images/treino-edit.jpg" Alt="Mony the dog" Elevation="25" Class="rounded-lg" />
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Color="@Color.Secondary">
+        <MudImage Src="images/treino-edit3.jpg" Alt="Mony the dog" Elevation="25" Class="rounded-lg" />
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Color="@Color.Tertiary">
+        <MudImage Src="images/treino-edit2.jpg" Alt="Mony the dog" Elevation="25" Class="rounded-lg" />
+       @*  <div class="d-flex" style="height:100%">
+            
+           
+             <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Color="@Color.Primary" Size="@Size.Large" /> 
+        </div>  *@
+    </MudCarouselItem>
+</MudCarousel>
+@* <MudSelect @bind-Value="transition" Label="Transition" Class="ma-2">
+    <MudSelectItem Value="@Transition.Fade">Fade</MudSelectItem>
+    <MudSelectItem Value="@Transition.Slide">Slide</MudSelectItem>
+    <MudSelectItem Value="@Transition.None">None</MudSelectItem>
+</MudSelect> *@
+@* <MudSwitch @bind-Value="arrows" Color="Color.Primary">Show Arrows</MudSwitch>
+<MudSwitch @bind-Value="bullets" Color="Color.Primary">Show Bullets</MudSwitch>
+<MudSwitch @bind-Value="enableSwipeGesture" Color="Color.Primary">Enable Swipe Gesture</MudSwitch>
+<MudSwitch @bind-Value="autocycle" Color="Color.Primary">Auto Cycle (Default: 5 secs)</MudSwitch> *@
+
+<MudPaper Height="400px" Width="100%">
+    <MudText Typo="Typo.h2" Align="Align.Center">Seu novo App de Treinamentos!</MudText>
+    <MudText Typo="Typo.h4" Align="Align.Center">Escolha o seu perfil</MudText>
+    <MudContainer MaxWidth="MaxWidth.Small" Style="margin-top: 40px;">
+        
+        <MudGrid Justify="Justify.Center">
+            <MudItem>
+                <MudButton Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Aluno</MudButton>
+            </MudItem>
+            <MudItem>
+                <MudButton Variant="Variant.Outlined" Color="Color.Info" Size="Size.Large" Class="spacing">Personal</MudButton>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+</MudPaper>
+
+
+
+
+@code{ 
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+}
