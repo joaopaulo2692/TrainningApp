@@ -31,8 +31,9 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\TrainningApp.API\TrainningApp.API.csproj" />
     <ProjectReference Include="..\TrainningApp.Client\TrainningApp.Client.csproj" />
+    <ProjectReference Include="..\TrainningApp.Core\TrainningApp.Core.csproj" />
+    <ProjectReference Include="..\TrainningApp.Infrastructure\TrainningApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
